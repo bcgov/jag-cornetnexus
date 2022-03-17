@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://reeks.bcgov/CORNETNexus.Source.ICS.ws.provider:ICSAccountStatusService" xmlns:tns="http://reeks.bcgov/CORNETNexus.Source.ICS.ws.provider:ICSAccountStatusService" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <xsd:element name="getNexusAccountStatus">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="userId" type="xsd:string"/>
+                <xsd:element name="csNumber" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getNexusAccountStatusResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="created" nillable="true" type="xsd:string"/>
+                <xsd:element name="active" nillable="true" type="xsd:string"/>
+                <xsd:element name="date" nillable="true" type="xsd:dateTime"/>
+                <xsd:element name="siteId" nillable="true" type="xsd:string"/>
+                <xsd:element name="responseCd" nillable="true" type="xsd:string"/>
+                <xsd:element name="message" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getPing">
+        <xsd:complexType>
+            <xsd:sequence/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getPingResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="status" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getHealth">
+        <xsd:complexType>
+            <xsd:sequence/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getHealthResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="appid" nillable="true" type="xsd:string"/>
+                <xsd:element name="method" nillable="true" type="xsd:string"/>
+                <xsd:element name="status" nillable="true" type="xsd:string"/>
+                <xsd:element name="host" nillable="true" type="xsd:string"/>
+                <xsd:element name="instance" nillable="true" type="xsd:string"/>
+                <xsd:element name="version" nillable="true" type="xsd:string"/>
+                <xsd:element name="compatibility" nillable="true" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
