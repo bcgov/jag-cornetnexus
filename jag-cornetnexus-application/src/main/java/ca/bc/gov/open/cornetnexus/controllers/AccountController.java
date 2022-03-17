@@ -49,7 +49,7 @@ public class AccountController {
         try {
             HttpEntity<GetNexusAccountStatusResponse> resp =
                     restTemplate.exchange(
-                            builder.toUriString(),
+                            builder.build().encode().toUri(),
                             HttpMethod.GET,
                             new HttpEntity<>(new HttpHeaders()),
                             GetNexusAccountStatusResponse.class);
